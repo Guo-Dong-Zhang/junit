@@ -26,4 +26,4 @@ def dbwrite(_stuid,_pwd):
 # mycursor.execute(sql,val2)
 # mydb.commit()
 
-print(mycursor.rowcount,"Data Insert succeeded!")
+# print(mycursor.rowcount,"Data Insert succeeded!")
