@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #262626;
+}
+
+button{
+    background: rgba(0,0,0,0);
+    width: 160px;
+    height: 60px;
+    text-align: center;
+    border: 4px solid #0277F9;
+    color: #0277F9;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.42s cubic-bezier(.25,.8,.25,1);
+}
+
+button:hover{
+    background: rgba(2,119,249,1);
+    color: #ffffff;
+}
+
+.titlebar{
+    position:fixed;
+    top: 0px;
+    height: 60px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    z-index: 999;
+}
+
+.titlebar-left{
+    margin-top:0px;
+    margin-left: 30px;
+}
+
+.titlebar-left img{
+    top: 10px;
+    width: 70px;
+}
+
+.top-area{
+    width: 100%;
+    height: 460px;
+    background-image: url('/static/8.jpg');
+    background-size: cover;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.top-text{
+    padding-top: 160px;
+    margin-left: 180px;
+}
+
+.top-text-head{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.top-text-sub{
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.top-qr{
+    width: 200px;
+    margin-top: 300px;
+    margin-right: 800px;
+    display: flex
+}
+
+.top-func{
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.top-func-single{
+    width: 50%;
+    height: 400px;
+    margin-bottom: 0px;
+}
+
+.top-func-text{
+    margin-top: 20px;
+}
+
+.top-func-head{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-func-cont{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+.top-func-icon img{
+    width: 200px;
+    height: 200px;
+}
+
+.update-list{
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+
+.update-list-title{
+    width: 140px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 100px;
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    background: #0277F9;
+}
+
+.update-list-title span{
+    color: #ffffff;
+}
+
+.update-list-inner{
+    display: flex;
+}
+
+.update-list-indi{
+    position: relative;
+    width: 3px;
+    background: #0277F9;
+    left: 55px;
+}
+
+.update-list-v-s-t{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.update-list-cont{
+    margin-top: 20px;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.update-list-v-s{
+    margin-bottom: 40px;
+}
+
+.update-list-v-s-c{
+    word-wrap: break-word;
+    line-height: 50px;
+    opacity: 0.8;
+}
+
+.foot{
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    color: #ffffff;
+    padding-top:35px;
+}
+
+.foot a{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.foot a:hover{
+    opacity: 1;
+}
+
+.foot span{
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.foot-left{
+    margin-left: 40px;
+}
+
+.foot-right{
+    position: absolute;
+    right: 40px;
+    margin-top: -20px;
+    cursor: default;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    .top-area {
+        background-image: none;
+        height: 620px;
+        margin-top: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    .titlebar-left {
+        margin-left: 20px;
+    }
+
+    .titlebar-left img {
+        width: 40%;
+    }
+
+    .top-text-head {
+        font-size: 32px;
+    }
+
+
+    .top-text-sub {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .top-text{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-qr {
+        width: 100%;
+        position: relative;
+        right: 0px;
+        margin-top: 50px;
+    }
+
+
+    .top-func{
+        display: block;
+    }
+
+    .top-func-single{
+        width: 100%;
+    }
+
+    .top-func-text {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-func-cont {
+        margin-top: 8px;
+    }
+
+    .update-list-title {
+        width: 110px;
+        font-size: 20px;
+    }
+
+    .update-list-v-s-c {
+        line-height: 36px;
+        width: 90%;
+    }
+
+    .update-list-indi {
+        width: 8px;
+    }
+
+    .foot{
+        height: 150px;
+    }
+
+    .foot-right{
+        position: relative;
+        right: 0px;
+        margin-top:20px;
+        margin-left: 40px;
+    }
+}
