@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<header class="intro-header" style="background-image: url('/static/8.jpg')" size="contain">
+<!-- Head -->
+<head>
+
+<style>
+	b
+</style>
+	<!-- Custom-Styleheet-Links -->
+<!--	"css/style1.css"-->
+<!--	"css/animate-custom.css" -->
+<!--	"./css/style.css"-->
+<!--	"{{ url_for('static', filename='style1.css')}}-->
+<!--	"{{ url_for('static', filename='animate-custom.css')}}"-->
+<!--	"{{ url_for('static', filename='style.css')}}"-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" >
+	<link rel="stylesheet" href="{{ url_for('static', filename='style1.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{ url_for('static', filename='animate-custom.css')}}"   type="text/css" media="all">
+
+
+	<!-- //Custom-Styleheet-Links -->
+</head>
+<!-- //Head -->
+
+
+
+<!-- Body -->
+<body>
+<div class="titlebar">
+	<div class="titlebar-left">
+<!--		"./assets/serverlogo.png"-->
+		<img src="/static/serverlogo.png" alt="JUnit logo">
+	</div>
+</div>
+<h1 style="color: black;font-size: 60px;font-family: -apple-system">Welcome to JUnit Server</h1>
+
+<div class="container w3layouts agileits">
+
+	<div class="content-left w3layouts agileits">
+<!--		"assets/user.png" -->
+		<img src="/static/user.png"  alt="Agileits">
+
+	</div>
+
+		<div class="content-right w3layouts agileits">
+			<section>
+				<div id="container_demo">
+					<a class="hiddenanchor w3layouts agileits" id="tologin"></a>
+					<a class="hiddenanchor w3layouts agileits" id="toregister"></a>
+					<div id="wrapper">
+						<div id="login" class="animate w3layouts agileits form">
+							<h2 class="w3layouts agileits">Sign In</h2>
+							<form  action="#" autocomplete="on" method="post">
+								<label>Username</label>
+								<input type="text" name="userameIN" required>
+								<label>Password</label>
+								<input type="password" name="passwordIN" required>
+								<div class="send-button w3layouts agileits">
+<!--									<form>-->
+										<input type="submit" value="SIGN IN" name = "submitIN">
+<!--									</form>-->
+									<div class="clear"></div>
+								</div>
+								<p class="change_link w3layouts agileits">
+									Don't have an account? <a href="#toregister" class="to_register">Sign Up!</a>
+								</p>
+								<div class="clear"></div>
+							</form>
+
+							<div class="clear"></div>
+						</div>
+						<div id="register" class="animate w3layouts agileits form">
+							<h2>Sign up</h2>
+							<form  action="#" autocomplete="on" method="post">
+								<form action="#" method="post">
+									<label>Name</label>
+									<input type="text" class="name w3layouts agileits" Name="Name" required>
+									<label>Password</label>
+									<input type="password" Name="Password" required>
+									<label>Password Again</label>
+									<input type="password" Name="Password" required>
+									<div class="send-button w3layouts agileits">
+<!--										<form action="#" method="post">-->
+											<input type="submit" value="SIGN UP">
+<!--										</form>-->
+									</div>
+								</form>
+								<p class="change_link w3layouts agileits">
+									Already have account? <a href="#tologin" class="to_register">Sign In</a>
+								</p>
+								<div class="clear"></div>
+							</form>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+<div class="footer w3layouts agileits">
+	<p style="color: black"> &copy; Tianlu Yan and Guodong Zhang</p>
+</div>
+
+
+</body>
+<!-- //Body -->
+
+</html>
