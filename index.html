@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JunitServer- &copy; Edinburgh</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      div.upload {
+        background-color:#fff;
+        border: 1px solid #ddd;
+        border-radius:5px;
+        display:inline-block;
+        height: 40px;
+        padding:3px 40px 3px 3px;
+        position:relative;
+        width: 1000px;
+      }
+
+      div.upload:hover {
+        opacity:0.95;
+      }
+
+      div.upload input[type="file"] {
+        width: 100%;
+        height: 40px;
+        opacity: 0;
+        cursor:pointer;
+        position:absolute;
+        left:0;
+      }
+      .uploadButton {
+        background-color: #425F9C;
+        border: none;
+        border-radius: 3px;
+        color: #FFF;
+        cursor:pointer;
+        display: inline-block;
+        height: 32px;
+        margin-right:15px;
+        width: auto;
+        padding:0 20px;
+        box-sizing: content-box;
+      }
+      .uploadButton1 {
+        background-color: #425F9C;
+        border: none;
+        border-radius: 3px;
+        color: #FFF;
+        cursor:pointer;
+        display: inline-block;
+        height: 32px;
+        margin-right:15px;
+        width: 120px;
+        padding:0 20px;
+        box-sizing: content-box;
+      }
+      .submit{
+        margin-top: 20px;
+        margin-left: 2px;
+      }
+      .fileName {
+
+        font-size:14px;
+      }
+
+      .upload + .uploadButton {
+        height:38px;
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#"><svg class="bi bi-grid-1x2-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z"/>
+  </svg>     A JUnit Server</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>>
+  </div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">A JUnit Server</h1>
+      <p>In a typical Java course, students are expected to implement small classes and create JUnit tests to test them. The aim of this project is to create a server which allows students to submit their class implementations, and their JUnit tests, and to run all of the students-created tests against all of the student created classes. </p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Check the result &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Upload the Java files</h2>
+        <p>The Student should upload the java class files in this area </p>
+        <form action="" method="post" enctype="multipart/form-data">
+          <div class="upload">
+            <input type="button" class="uploadButton" value="Browse" />
+            <input type="file" name="javafile"  id="fileUpload" />
+            <span class="fileName">Select file..</span>
+          </div>
+           <div class="submit">
+            <input type="submit" class="uploadButton" value="Upload" />
+           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Upload the JUnit test files</h2>
+        <p>The Student should upload the JUnit test files in this area </p>
+        <form action="" method="post" enctype="multipart/form-data">
+          <div class="upload">
+            <input type="button" class="uploadButton" value="Browse" />
+            <input type="file" name="junitfile"  id="fileUpload1" />
+            <span class="fileName">Select file..</span>
+          </div>
+          <div class="submit">
+            <input type="submit" class="uploadButton" value="Upload" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+
+</main>
+
+<footer class="container">
+  <p>&copy; A JUnit Server created by Tianlu Yan, Guodong Zhang</p>
+</footer>
+    <script>
+      $('input[type=file]').change(function(e) {
+        $in = $(this);
+        $in.next().html($in.val());
+
+      });
+
+      $('.uploadButton').click(function() {
+        var fileName = $("#fileUpload").val();
+        if (fileName) {
+        }
+        else {
+          alert("Please select a file to upload");
+        }
+      });
+    </script>
+  </body>
+</html>
