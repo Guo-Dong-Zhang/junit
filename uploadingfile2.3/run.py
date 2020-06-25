@@ -61,6 +61,9 @@ def login():
                 session['logstamp'] = stuid
                 print(type(stuid),stuid)
                 return redirect(url_for('upload_file'))
+            else:
+                return redirect(url_for('login.html'))
+
         #sign up check
         if  pwdcheckUP != None and pwdUP != None and stuidUP !=None:
             if pwdcheckUP == pwdUP:
