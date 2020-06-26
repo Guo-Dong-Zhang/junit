@@ -1,9 +1,0 @@
-Flask
-html 文件放在templates
-Css 放在static中不然不能加载出来。  https://www.thinbug.com/q/21145720
-
-表单被其他div层遮挡导致部分表单不能点击。    问题描述和解决方案     https://blog.csdn.net/weixin_43225142/article/details/88221546
-
-项目问题：
-文件上传是单一文件，不能复数文件上传，效率低.    
-带中文字符不能上传

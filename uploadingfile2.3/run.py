@@ -9,10 +9,10 @@ from werkzeug.utils import secure_filename
 
 
 # UPLOAD_FOLDER = '/upload'
-JAVAUPLOAD_FOLDER = '/upload/javalist'
-JUNITUPLOAD_FOLDER = '/upload/junitlist'
-# JAVAUPLOAD_FOLDER = '/Users/guodongzhang/Desktop/毕设/junitserver/filestore/javalist'
-# JUNITUPLOAD_FOLDER = '/Users/guodongzhang/Desktop/毕设/junitserver/filestore/junitlist'
+# JAVAUPLOAD_FOLDER = '/upload/javalist'
+# JUNITUPLOAD_FOLDER = '/upload/junitlist'
+JAVAUPLOAD_FOLDER = '/Users/guodongzhang/Desktop/毕设/junitserver/filestore/javalist'
+JUNITUPLOAD_FOLDER = '/Users/guodongzhang/Desktop/毕设/junitserver/filestore/junitlist'
 ALLOWED_EXTENSIONS = set(['txt', 'java'])
 
 app = Flask(__name__)
@@ -62,7 +62,7 @@ def login():
                 print(type(stuid),stuid)
                 return redirect(url_for('upload_file'))
             else:
-                return redirect(url_for('login.html'))
+                return redirect(url_for('login'))
 
         #sign up check
         if  pwdcheckUP != None and pwdUP != None and stuidUP !=None:
@@ -100,7 +100,8 @@ def upload_file():
                 JUNITUPLOAD_FOLDER_id = JUNITUPLOAD_FOLDER + '/' + junitdirid                  #Student id will be added here
                 junitfile.save(os.path.join(JUNITUPLOAD_FOLDER_id, filename))
                 return redirect(url_for('upload_success', filename=filename))
-        return render_template("uploadpage.html")
+        # return render_template("uploadpage.html")
+        return render_template("index.html")
     else:
         return redirect(url_for('login'))
 
