@@ -1,13 +1,12 @@
 import os
 import re
 import listdir
-import sandbox
 
 javadic = listdir.javadic
 junitdic = listdir.junitdic
 projectpath = listdir.projectpath
 
-junitPrefix = "java -cp /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/lib/junit413.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el8_1.x86_64/lib/hamcrest-core-13.jar:. org.junit.runner.JUnitCore";
+junitPrefix = "java org.junit.runner.JUnitCore";
 filePrefix = "com.junit."
 
 for k,v in junitdic.items():
@@ -29,12 +28,7 @@ def run():
             address2 = projectpath+"/compileresult/"+stid+"/com/junit/ "
             os.system("cp -r "+ address2+address3)
             os.chdir(projectpath+"/testcontainer/")
-            #print(projectpath+"/testcontainer/")
-            cl = junitPrefix + junitdic[stid]
-            sandbox.container(cl)
-            #os.system(junitPrefix + junitdic[stid])
-           
-            #print(junitPrefix + junitdic[stid])
+            os.system(junitPrefix + junitdic[stid])
             os.system("rm -rf "+projectpath+"/testcontainer/com/junit")
             print("\n\n\n"+k+"&&"+stid+"test already!\n\n\n")
         os.system("rm -rf "+projectpath+"/testcontainer/com/*")
